@@ -2,6 +2,7 @@ package entities;
 
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.*;
 
 
@@ -11,8 +12,8 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     private String nome;
+    private LocalDate nascimento;
 
 
     @OneToMany(mappedBy = "aluno", cascade = CascadeType.ALL, orphanRemoval = true)
@@ -37,6 +38,8 @@ public class Aluno {
     public Long getId() { return id; }
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
+    public LocalDate getNascimento() { return nascimento; }
+    public void setNascimento(LocalDate nascimento) { this.nascimento = nascimento; }
 
 
     public List<Endereco> getEnderecos() { return enderecos; }

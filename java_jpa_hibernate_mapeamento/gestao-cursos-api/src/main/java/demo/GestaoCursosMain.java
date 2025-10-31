@@ -10,12 +10,12 @@ public class GestaoCursosMain {
     public static void main(String[] args) {
 // Criar 1 aluno (com um telefone e um endereço)
         Aluno aluno = new Aluno("Maria da Silva");
-        aluno.addEndereco(new Endereco("Rua das Flores", "100", "São Paulo", "SP", "01000-000"));
+        aluno.addEndereco(new Endereco("Rua das Flores", "100", "São Paulo", "SP", "01000-000", "Bairro", "Enderco"));
         aluno.addTelefone(new Telefone("11-99999-0000", "celular"));
 
 
 // Criar 1 professor
-        Professor prof = new Professor("Prof. João");
+        Professor prof = new Professor("Prof. João", "123", "123@gmail.com");
 
 
 // Criar 1 material de curso
@@ -23,7 +23,7 @@ public class GestaoCursosMain {
 
 
 // Criar 1 curso (com um professor e um aluno) e um material do curso
-        Curso curso = new Curso("Java Básico");
+        Curso curso = new Curso("Java Básico", "JV");
         curso.setProfessor(prof);
         curso.setMaterial(material);
 
